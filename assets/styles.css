@@ -1,0 +1,493 @@
+/*-------------   HTML 5 DOCTOR CSS RESET STARTS   -------------*/
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+body {
+    line-height:1;
+    position: relative;
+}
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section {
+    display:block;
+}
+nav ul {
+    list-style:none;
+}
+blockquote, q {
+    quotes:none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content:'';
+    content:none;
+}
+a {
+    margin:0;
+    padding:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+    text-decoration: none;
+}
+/* change colours to suit your needs */
+ins {
+    background-color:#ff9;
+    color:#000;
+    text-decoration:none;
+}
+/* change colours to suit your needs */
+mark {
+    background-color:#ff9;
+    color:#000;
+    font-style:italic;
+    font-weight:bold;
+}
+del {
+    text-decoration: line-through;
+}
+abbr[title], dfn[title] {
+    border-bottom:1px dotted;
+    cursor:help;
+}
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+/* change border colour to suit your needs */
+hr {
+    display:block;
+    height:1px;
+    border:0;
+    border-top:1px solid #cccccc;
+    margin:1em 0;
+    padding:0;
+}
+input, select {
+    vertical-align:middle;
+}
+
+@font-face {
+    font-family:'Gill Sans MT';
+    src: url('fonts/GIL____.TTF') format('truetype'),
+}
+
+@font-face {
+    font-family:'Chiller';
+    src: url('fonts/chiller.ttf') format('truetype');
+}
+
+/*----------------- CSS RESET ENDS ----------------*/
+
+/*----------------- HEAD SECTION STARTS ----------------*/
+
+
+body {
+
+    background-image: url(img/back.jpg);
+    /*background-size: cover;*/
+    background-size: cover;
+}
+
+
+
+header {
+
+    height: 170px;
+    margin: auto;
+    background-color: black;
+    min-width: 1380px;
+}
+
+header img {
+
+    margin: 10px 0px 0px 40px;
+    float: left;
+    /*outline: 1px white solid;*/
+}
+
+.nav {
+
+    float: right;
+    margin-right: 100px;
+}
+
+.nav>ul>li>a {
+
+    color: #CFCFCF;
+    text-transform: uppercase;
+    font-family: 'chiller';
+    font-size: 30px;
+    font-weight: lighter;
+    /*outline: 1px green solid;*/
+}
+
+.nav ul li a:hover, .hidden ul li a:hover {
+
+    color: lime;
+}
+
+.nav>ul>li {
+
+    height: 30px;
+    display: inline-block;
+    margin: 110px 0px 0px 50px;
+    text-align: center;
+    position: relative;
+    /*outline: 1px white solid;*/
+}
+
+.nav>ul>li>ul {
+
+    width: 150px;
+    /*outline: 1px red solid;*/
+    position: absolute;
+    top: 100%;
+    left:-25px;
+    background-color: black;
+    border-radius: 20px;
+    display: none;
+    z-index: 50;
+    color: #CFCFCF;
+}
+
+.nav>ul>li:hover>ul {display: block;}
+
+.nav>ul>li>ul>li {
+
+    background-color: black;
+    text-align: center;
+    list-style-type: none;
+    margin-top: 20px;
+    margin-bottom: 16px;
+}
+
+.nav>ul>li>ul>li>a {
+
+    text-transform: uppercase;
+    font-family: 'chiller';
+    font-size: 30px;
+    font-weight: lighter;
+    color: #CFCFCF;
+}
+
+/*----------------- HEAD SECTION ENDS ----------------*/
+
+/*----------------- MAIN SECTION STARTS ----------------*/
+
+h2 {   
+
+    font-family: 'chiller';
+    font-size: 70px;
+    /*border-bottom: 2px black solid;*/
+    margin: auto;
+    text-align: center;
+    padding-top: 90px;
+    margin-bottom: 40px;
+    /*outline: 1px red solid;*/
+}
+
+h3 {
+
+    text-align: center;
+    font-family: 'chiller';
+    font-size: 30px;
+    margin: 20px 0px 20px 0px;
+}
+
+.promo img {margin-top: 50px;}
+
+.special1 {
+
+    width: 100%;
+    height: 350px;
+    margin: 50px 0px 50px 0px;
+}
+
+.special2 {margin: 50px 0px 50px 0px;}
+
+.weather {padding-bottom: 50px;}
+
+.boards, .boots, .bind, .jacket, .pants, .goggle, .products {
+
+    width: 250px;
+    height: 490px;
+    float: left;
+    margin: 0px 0px 0px 112px;
+    border-bottom: 2px black solid;
+    /*outline: 1px green solid;*/
+}
+
+.pants:nth-child(-1n+3), .jacket:nth-child(-1n+3),.boots:nth-child(-1n+3),.bind:nth-child(-1n+3),.boards:nth-child(-1n+3),.goggle:nth-child(-1n+3),.products:nth-child(-1n+3){
+
+    border-top: 2px black solid;
+}
+
+.products {height: 420px;}
+
+.boots:nth-child(-1n+3),.pants:nth-child(-1n+3),.goggle:nth-child(-1n+3),.jacket:nth-child(-1n+3),.bind:nth-child(-1n+3),.boards:nth-child(-1n+3),.products:nth-child(-1n+3){
+
+    padding-top: 50px;
+}
+
+.boards:nth-child(1n+4),.boots:nth-child(1n+4),.bind:nth-child(1n+4),.jacket:nth-child(1n+4),.goggle:nth-child(1n+4),.pants:nth-child(1n+4),.products:nth-child(1n+4) {
+
+    padding-top: 50px;
+    margin-bottom: 50px;
+}
+
+.boards {
+
+    height: 630px;
+    margin: 0px 0px 0px 115px;
+}
+
+.pants {height: 470px;}
+
+.main, img {
+
+    margin: auto;
+    display:block;
+}
+
+.products:hover,.boots:hover,.goggle:hover, .boards:hover, .jacket:hover, .pants:hover, .bind:hover{
+
+    color: red;
+    background-color: rgba(0,0,0,0.07);
+}
+
+.productwrapper {
+
+    width: 1200px;
+    margin: auto;
+    /*outline: 1px blue solid;*/
+}
+
+.productwrapper:after {
+
+    clear: both;
+    content:"";
+    display: block;
+}
+
+.goggle {height: 350px;}
+
+.goggle img:hover, .jacket img:hover, .pants img:hover, .bind img:hover, .boots img:hover, .boards img:hover, .products img:hover {
+
+    
+}
+
+.register1,.register2 {
+
+    width: 310px;
+    height: 500px;
+    /*outline: 1px solid black;*/
+    float: left;
+    margin-left: 30px;
+    line-height: 40px;
+}
+
+.register1 {margin-left: 295px;}
+
+.productwrapper button {
+
+    width: 120px;
+    height: 35px;
+    background-color: rgba(0,0,0,0.6);
+    color: white;
+    border-radius: 15px;
+    border-style: none;
+    font-family: 'ubuntu';
+    font-size: 14px;
+    font-weight: lighter;
+    display: block;
+    margin: auto;
+}
+
+.productwrapper button:hover {color: lime;}
+
+label {
+
+    font-family: 'ubuntu';
+    font-size: 20px;
+    font-weight: lighter;
+    display: block;
+    color: #FF0095;
+    margin-top: 10px;
+    /*outline: 1px solid red;*/
+}
+
+input {
+
+    height: 35px;
+    width: 270px;
+}
+
+.regbutton {
+
+    width: 100%;
+    padding-top: 40px;
+    padding-bottom: 60px;
+    display: block;
+    margin:auto;
+    clear: both;
+    float: left;
+}
+
+.login {
+
+    width: 273px;
+    margin: auto;
+    line-height: 50px;
+    /*outline: 1px green solid;*/
+}
+
+.loginbuttons {
+
+    width: 270px;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 110px;
+    /*outline: 1px blue solid;*/
+}
+
+/*----------------- MAIN SECTION ENDS ----------------*/
+
+/*-------------------- TABLE STARTS -----------------*/
+
+table {
+
+    width: 900px;
+    margin-top: 50px;
+    border-spacing: 3px;
+    border-collapse: separate;
+    margin: auto;
+}
+
+tr:nth-child(even) {background-color: #aaa;}
+
+tr:nth-child(odd) {background-color: #eee;}
+
+td:nth-child(5) {width: 20px;}
+
+td {
+
+    padding: 10px;
+    margin-right: 1px;
+    vertical-align: middle;
+}
+
+th {
+
+    text-align: left;
+    padding: 5px;
+    background-color: aqua;
+}
+
+/*------------------ TABLE ENDS ------------------*/
+
+/*----------- FORM VALIDATION -------------*/
+
+.message-error{
+
+    color: #fff;
+    font-size: 25px;
+    vertical-align: baseline;
+    white-space: nowrap;
+    color: red;
+    padding-left: 4px;
+}
+
+.message-success{
+    color: #fff;
+    font-size: 20px;
+    vertical-align: baseline;
+    white-space: nowrap;
+    margin: 0.2em;
+    color: green;
+}
+
+/*----------- FORM VALIDATION ENDS ----------*/
+
+
+/*----------------- FOOTER STARTS ----------------*/
+
+footer {
+
+    width: 100%;
+    height: 270px;
+    clear: both;
+    background-color: black;
+}
+
+.wrapper {
+
+    margin: auto;
+    width: 1100px;
+    height: 200px;
+}
+
+.fbox1,.fbox2,.fbox3, .fbox4 {
+    float: left;
+    /*outline: 1px red solid;*/
+    width: 240px;
+    height: 150px;
+    margin-left: 27px;
+    margin-top: 50px;
+    border-left: 1px white solid;
+}
+
+.fbox4 {border-right: 1px white solid;}
+
+h4 {
+
+    color: gray;
+    font-family: 'Chiller';
+    font-size: 25px;
+    margin: 0px 0px 15px 25px;
+}
+
+footer ul li {
+
+    list-style-type: none;
+    line-height: 21px;
+}
+
+footer ul li a{
+
+    color: #0099CC;
+    margin-left: 25px;
+    font-family: helvetica;
+    font-size: 12px;
+    font-weight: lighter;
+}
+
+footer p {
+
+    color: gray;
+    clear: both;
+    font-family: helvetica;
+    font-size: 10px;
+    font-weight: lighter;
+    text-align: center;
+    padding-top: 40px;
+}
+
+/*----------------- FOOTER ENDS ----------------*/
