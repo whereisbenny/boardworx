@@ -8,19 +8,19 @@ class cart{
 		$this->aContents = array();
 	}
 
-	public function addProduct($iProductID){
+	public function addProduct($iProductid){
 		
-		if(isset($this->aContents[$iProductID]) == false){
-			$this->aContents[$iProductID] = 1;
+		if(isset($this->aContents[$iProductid]) == false){
+			$this->aContents[$iProductid] = 1;
 		}else{
-			$this->aContents[$iProductID] += 1;
+			$this->aContents[$iProductid] += 1;
 		}
 	}
 
-	public function removeProduct($iProductID){
-		$this->aContents[$iProductID] -= 1;
-		if($this->aContents[$iProductID] == 0){
-			unset($this->aContents[$iProductID]);
+	public function removeProduct($iProductid){
+		$this->aContents[$iProductid] -= 1;
+		if($this->aContents[$iProductid] == 0){
+			unset($this->aContents[$iProductid]);
 		}
 	}
 

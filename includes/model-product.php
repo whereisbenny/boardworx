@@ -14,7 +14,7 @@ class product{
 
 		$this->iProductid = 0;
 		$this->sProductname = "";
-		$this->iPrice = 0;
+		$this->fPrice = 0;
 		$this->iTypeid = 0;
 		$this->sPicturelink = "";
 	}
@@ -48,19 +48,75 @@ class product{
 		$oConnection->close_connection();
 	}
 
-	public function __get($var){
 
-		switch ($var) {
-			case "productid": return $this->iProductid; break;
-			case "productname": return $this->sProductname; break;
-			case "picturelink": return $this->sPicturelink; break;
-			case "price":       return $this->fPrice; break;
-			
-			default: die($var . " Does Not Exist");
+
+	public function save(){
+
+		$oConnection = new Connection();
+
+		$sSQL = "INSERT INTO tbproduct
+		(productname, price, typeid, 
+			picturelink)VALUES ('".$this->sProductname."',
+
+		'".$this->fPrice."',
+		'".$this->iTypeid."',
+		'".$this->sPicturelink."')";
+
+		$bResult = $oConnection->query($sSQL);
+		//checks to see if customer exists
+		if($bResult == true){
+			$this->iProductid = $oConnection->get_insert_id();
+		} else {
+			die($sSQL . " fails");
 		}
-	}
+
+		$oConnection->close_connection();
 
 }
+
+
+
+public function __get($var){
+
+	switch ($var) {
+		case "productid": return $this->iProductid; break;
+		case "productname": return $this->sProductname; break;
+		case "picturelink": return $this->sPicturelink; break;
+		case "price":       return $this->fPrice; break;
+
+		default: die($var . " Does Not Exist");
+	}
+}
+
+
+public function __set($var, $value){
+	switch ($var) {
+		case "productname":
+		$this->sProductname = $value;
+		break;
+		case "price":
+		$this->fPrice = $value;
+		break;
+		case "typeid":
+		$this->iTypeid = $value;
+		break;
+		case "PhotoPath":
+		$this->sPicturelink = $value;
+		break;
+		default:
+		die($var . "Product could not be saved");
+	}
+}
+
+
+
+
+}
+
+
+
+
+
 
 // $oProduct = new product();
 // $oProduct->load(4);

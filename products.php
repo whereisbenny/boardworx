@@ -1,9 +1,9 @@
 <?php
 require_once("includes/view.php");
 require_once("includes/model-collection.php");
+require_once("includes/model-cart.php");
+
 session_start();
-
-
 
 $oView = new view();                  
 $oCollection = new collection();    

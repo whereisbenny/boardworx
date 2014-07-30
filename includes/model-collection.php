@@ -42,18 +42,36 @@ class collection{
 
 	}
 
+	function findCustomerByUsername($userName){
+			$aCustomers = array();
+
+			//make connection
+			$oConnection = new Connection();
+
+			//execute a query
+			$sSql = "SELECT customerid 
+						FROM tbcustomer
+						WHERE username = '".$userName."'";
+						
+			$oResult = $oConnection->query($sSql);
+		
+			$aCustomers = $oConnection->fetch_array($oResult);
+			$oConnection->close_connection();
+			if ($aCustomers == false) {
+
+				return false;
+				
+			}else{
+				$oCustomer = new customer();
+				$oCustomer->load($aCustomers["customerid"]);
+				return $oCustomer;
+			}
+
+
+		}
+
 
 
 }
-
-
-
-// $oCollection = new collection;
-// $aAllcatagorys = $oCollection->getAllProductTypes();
-
-// echo "<pre>";
-// print_r($aAllcatagorys);
-// echo "</pre>";
-
 
 ?>

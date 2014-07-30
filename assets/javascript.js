@@ -43,6 +43,32 @@ function checkName(sInputId){
     return bValid;
 }
 
+function checkAny(sInputId){
+
+    var bValid = false;
+    var bFilled = checkEmpty(sInputId);
+
+    if (bFilled == true) {
+        var oInput = document.getElementById(sInputId);
+        var sInputValue = oInput.value;
+
+        var oMessage = document.getElementById(sInputId + 'Message')
+        
+        var oRegex = new RegExp("");
+        if (oRegex.test(sInputValue) == false) {
+            oMessage.innerHTML = '✔';
+            oMessage.className = 'message-success';
+            bValid = true;
+        } else {
+            oMessage.className = 'message-error';
+            oMessage.innerHTML = '✗';
+        }
+    }
+    return bValid;
+}
+
+
+
 function checkEmail(sInputId){
 
     var bValid = false;
@@ -108,6 +134,70 @@ function checkAll(){
     && bValidtown && bValidcity && bValidcountry
 
     return bValid;
+}
+
+window.onload = function(){
+
+    var oFirstName = document.getElementById("firstname");
+
+    if(oFirstName){
+        oFirstName.onblur = function(){checkName(this.id);};
+    }
+
+    var oLastName = document.getElementById("lastname");
+    
+    if(oLastName){
+        oLastName.onblur = function(){checkName(this.id);};
+    }
+
+    var oPhone = document.getElementById("phone");
+    
+    if(oPhone){
+        oPhone.onblur = function(){checkNumber(this.id);};
+    }
+
+    var oEmail = document.getElementById("email");
+    
+    if(oEmail){
+        oEmail.onblur = function(){checkEmail(this.id);};
+    }
+
+    var oUserName = document.getElementById("username");
+    
+    if(oUserName){
+        oUserName.onblur = function(){checkName(this.id);};
+    }
+
+    var oPassword = document.getElementById("password");
+    
+    if(oPassword){
+        oPassword.onblur = function(){checkEmpty(this.id);};
+    }
+
+    var oStreet = document.getElementById("street");
+    
+    if(oStreet){
+        oStreet.onblur = function(){checkEmpty(this.id);};
+    }
+    
+    var oTown = document.getElementById("town");
+    
+    if(oTown){
+        oTown.onblur = function(){checkName(this.id);};
+    }
+
+    var oCity = document.getElementById("city");
+
+    if(oCity){
+        oCity.onblur = function(){checkName(this.id);};
+    }
+
+    var oCountry = document.getElementById("country");
+
+    if(oCountry){
+        oCountry.onblur = function(){checkName(this.id);};
+    }
+
 }
 
 //FORM VALIDATION ENDS

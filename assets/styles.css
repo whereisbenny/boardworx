@@ -102,23 +102,21 @@ input, select {
 body {
 
     background-image: url(img/back.jpg);
-    /*background-size: cover;*/
     background-size: cover;
+
 }
-
-
 
 header {
 
     height: 170px;
     margin: auto;
     background-color: black;
-    min-width: 1380px;
+    min-width: 1280px;
 }
 
 header img {
 
-    margin: 10px 0px 0px 40px;
+    margin: 10px 0px 0px 30px;
     float: left;
     /*outline: 1px white solid;*/
 }
@@ -126,7 +124,8 @@ header img {
 .nav {
 
     float: right;
-    margin-right: 100px;
+    /*outline: 1px white solid;*/
+    margin-top: 110px;
 }
 
 .nav>ul>li>a {
@@ -135,7 +134,6 @@ header img {
     text-transform: uppercase;
     font-family: 'chiller';
     font-size: 30px;
-    font-weight: lighter;
     /*outline: 1px green solid;*/
 }
 
@@ -144,11 +142,13 @@ header img {
     color: lime;
 }
 
+
+
 .nav>ul>li {
 
     height: 30px;
     display: inline-block;
-    margin: 110px 0px 0px 50px;
+    margin: 0px 55px 0px 0px;
     text-align: center;
     position: relative;
     /*outline: 1px white solid;*/
@@ -179,12 +179,16 @@ header img {
     margin-bottom: 16px;
 }
 
+.nav ul li ul li a:hover {
+
+    font-size: 32px;
+}
+
 .nav>ul>li>ul>li>a {
 
     text-transform: uppercase;
     font-family: 'chiller';
     font-size: 30px;
-    font-weight: lighter;
     color: #CFCFCF;
 }
 
@@ -225,7 +229,7 @@ h3 {
 
 .weather {padding-bottom: 50px;}
 
-.boards, .boots, .bind, .jacket, .pants, .goggle, .products {
+.boards, .boots, .bindings, .jackets, .pants, .goggles, .products {
 
     width: 250px;
     height: 490px;
@@ -235,19 +239,19 @@ h3 {
     /*outline: 1px green solid;*/
 }
 
-.pants:nth-child(-1n+3), .jacket:nth-child(-1n+3),.boots:nth-child(-1n+3),.bind:nth-child(-1n+3),.boards:nth-child(-1n+3),.goggle:nth-child(-1n+3),.products:nth-child(-1n+3){
+.pants:nth-child(-1n+3), .jackets:nth-child(-1n+3),.boots:nth-child(-1n+3),.bindings:nth-child(-1n+3),.boards:nth-child(-1n+3),.goggles:nth-child(-1n+3),.products:nth-child(-1n+3){
 
     border-top: 2px black solid;
 }
 
 .products {height: 420px;}
 
-.boots:nth-child(-1n+3),.pants:nth-child(-1n+3),.goggle:nth-child(-1n+3),.jacket:nth-child(-1n+3),.bind:nth-child(-1n+3),.boards:nth-child(-1n+3),.products:nth-child(-1n+3){
+.boots:nth-child(-1n+3),.pants:nth-child(-1n+3),.goggles:nth-child(-1n+3),.jackets:nth-child(-1n+3),.bindings:nth-child(-1n+3),.boards:nth-child(-1n+3),.products:nth-child(-1n+3){
 
     padding-top: 50px;
 }
 
-.boards:nth-child(1n+4),.boots:nth-child(1n+4),.bind:nth-child(1n+4),.jacket:nth-child(1n+4),.goggle:nth-child(1n+4),.pants:nth-child(1n+4),.products:nth-child(1n+4) {
+.boards:nth-child(1n+4),.boots:nth-child(1n+4),.bindings:nth-child(1n+4),.jackets:nth-child(1n+4),.goggles:nth-child(1n+4),.pants:nth-child(1n+4),.products:nth-child(1n+4) {
 
     padding-top: 50px;
     margin-bottom: 50px;
@@ -267,7 +271,7 @@ h3 {
     display:block;
 }
 
-.products:hover,.boots:hover,.goggle:hover, .boards:hover, .jacket:hover, .pants:hover, .bind:hover{
+.products:hover,.boots:hover,.goggles:hover, .boards:hover, .jackets:hover, .pants:hover, .bindings:hover{
 
     color: red;
     background-color: rgba(0,0,0,0.07);
@@ -287,9 +291,9 @@ h3 {
     display: block;
 }
 
-.goggle {height: 350px;}
+.goggles {height: 350px;}
 
-.goggle img:hover, .jacket img:hover, .pants img:hover, .bind img:hover, .boots img:hover, .boards img:hover, .products img:hover {
+.goggles img:hover, .jackets img:hover, .pants img:hover, .bindings img:hover, .boots img:hover, .boards img:hover, .products img:hover {
 
     
 }
@@ -297,8 +301,6 @@ h3 {
 .register1,.register2 {
 
     width: 310px;
-    height: 500px;
-    /*outline: 1px solid black;*/
     float: left;
     margin-left: 30px;
     line-height: 40px;
@@ -310,8 +312,8 @@ h3 {
 
     width: 120px;
     height: 35px;
-    background-color: rgba(0,0,0,0.6);
     color: white;
+    background-color: rgba(0,0,0,0.6);
     border-radius: 15px;
     border-style: none;
     font-family: 'ubuntu';
@@ -320,6 +322,10 @@ h3 {
     display: block;
     margin: auto;
 }
+
+.productwrapper button a {color: white;}
+
+.productwrapper button a:hover {color: lime;}
 
 .productwrapper button:hover {color: lime;}
 
@@ -342,33 +348,45 @@ input {
 
 .regbutton {
 
-    width: 100%;
-    padding-top: 40px;
+    width: 273px;
+    padding-top: 60px;
     padding-bottom: 60px;
     display: block;
     margin:auto;
     clear: both;
-    float: left;
 }
 
-.login {
+.regbutton button:hover {
+
+    cursor:pointer;
+}
+
+.logins {
 
     width: 273px;
     margin: auto;
-    line-height: 50px;
-    /*outline: 1px green solid;*/
+    line-height: 40px;
 }
 
 .loginbuttons {
 
-    width: 270px;
     margin: auto;
     margin-top: 50px;
     margin-bottom: 110px;
-    /*outline: 1px blue solid;*/
 }
 
-/*----------------- MAIN SECTION ENDS ----------------*/
+.loginbuttons button:hover {
+
+cursor: pointer;
+}
+
+.message {
+
+    padding-top: 190px;
+    padding-bottom: 190px;
+}
+
+/*----------------- MAIN SECTION ENDS ----------------
 
 /*-------------------- TABLE STARTS -----------------*/
 
@@ -376,14 +394,15 @@ table {
 
     width: 900px;
     margin-top: 50px;
+    padding-bottom: 290px;
     border-spacing: 3px;
     border-collapse: separate;
     margin: auto;
 }
 
-tr:nth-child(even) {background-color: #aaa;}
+tr:nth-child(even) {background-color: ;}
 
-tr:nth-child(odd) {background-color: #eee;}
+tr:nth-child(odd) {background-color: ;}
 
 td:nth-child(5) {width: 20px;}
 
@@ -397,7 +416,7 @@ td {
 th {
 
     text-align: left;
-    padding: 5px;
+    padding: 10px;
     background-color: aqua;
 }
 
